@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #7c5dfa;
+  --color-primaryHover: #9277ff;
+  --color-bgLight: #f8f8fb;
+  --color-bgDark: #141625;
+  --color-cardDark: #1e2139;
+  --color-muted: #888eb0;
+  --color-mutedDark: #7e88c3;
+  --color-danger: #ec5757;
+  --color-success: #33d69f;
+  --color-warning: #ff8f00;
+  --color-sidebar: #373b53;
+  --color-drawerDark: #141625;
+  --color-softDark: #252945;
+
+  --radius-panel: 20px;
+  --shadow-panel: 0 10px 20px rgba(72, 84, 159, 0.25);
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+}
+
+@layer components {
+  .input-base {
+    @apply h-12 w-full rounded-lg border border-[#DFE3FA] bg-white px-4 text-sm font-semibold outline-none transition hover:border-primary focus:border-primary dark:border-softDark dark:bg-cardDark dark:text-white;
+  }
+
+  .input-error {
+    @apply border-danger text-danger focus:border-danger;
+  }
+
+  .btn-primary {
+    @apply rounded-full bg-primary px-6 py-4 text-sm font-bold text-white transition hover:bg-primaryHover;
+  }
+
+  .btn-secondary {
+    @apply rounded-full bg-[#F9FAFE] px-6 py-4 text-sm font-bold text-[#7E88C3] transition hover:bg-[#DFE3FA] dark:bg-softDark dark:text-[#DFE3FA];
+  }
+
+  .btn-danger {
+    @apply rounded-full bg-danger px-6 py-4 text-sm font-bold text-white transition hover:opacity-80;
+  }
+
+  .btn-dark {
+    @apply rounded-full bg-sidebar px-6 py-4 text-sm font-bold text-[#DFE3FA] transition hover:bg-black;
+  }
+
+  .label-text {
+    @apply mb-2 block text-xs font-medium text-[#7E88C3];
+  }
+
+  .rounded-panel {
+    border-radius: var(--radius-panel);
+  }
+
+  .shadow-panel {
+    box-shadow: var(--shadow-panel);
+  }
+}
