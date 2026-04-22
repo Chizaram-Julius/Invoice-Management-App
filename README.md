@@ -1,5 +1,11 @@
 # Invoice Management App
 
+Live Demo
+https://invoicemgtapp.netlify.app/
+
+GitHub Repository
+https://github.com/Chizaram-Julius/Invoice-Management-App
+
 ## Overview
 
 A fully responsive Invoice Management Application built with React and TailwindCSS based on the provided Figma design for HNG Stage 2 (Frontend).
